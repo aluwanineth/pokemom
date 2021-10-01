@@ -7,7 +7,7 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o publishdir
 
-FROM microsoft/dotnet:aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS runtime
 EXPOSE 5555
 WORKDIR /app
 COPY --from=build /app/publishdir .
