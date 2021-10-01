@@ -1,22 +1,14 @@
-#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS build
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
-WORKDIR /src
-COPY ["Pokemom.Api/Pokemom.Api.csproj", "Pokemom.Api/"]
-RUN dotnet restore "Pokemom.Api/Pokemom.Api.csproj"
-COPY . .
-WORKDIR "/src/Pokemom.Api"
-RUN dotnet build "Pokemom.Api.csproj" -c Release -o /app/build
+COPY *.csproj ./
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish "Pokemom.Api.csproj" -c Release -o /app/publish
+COPY . ./
+RUN dotnet publish -c Release -o publishdir
 
-FROM base AS final
+FROM microsoft/dotnet:aspnetcore-runtime AS runtime
+EXPOSE 5555
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/publishdir .
 ENTRYPOINT ["dotnet", "Pokemom.Api.dll"]

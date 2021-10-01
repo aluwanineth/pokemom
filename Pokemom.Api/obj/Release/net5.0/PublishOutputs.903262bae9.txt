@@ -1,0 +1,15 @@
+C:\My Data\standard bank\Pokemom\build\Pokemom.Api.xml
+C:\My Data\standard bank\Pokemom\build\Pokemom.Api.exe
+C:\My Data\standard bank\Pokemom\build\appsettings.Development.json
+C:\My Data\standard bank\Pokemom\build\appsettings.json
+C:\My Data\standard bank\Pokemom\build\Pokemom.Api.dll
+C:\My Data\standard bank\Pokemom\build\Pokemom.Api.deps.json
+C:\My Data\standard bank\Pokemom\build\Pokemom.Api.runtimeconfig.json
+C:\My Data\standard bank\Pokemom\build\Pokemom.Api.pdb
+C:\My Data\standard bank\Pokemom\build\System.Net.Http.Formatting.dll
+C:\My Data\standard bank\Pokemom\build\Microsoft.OpenApi.dll
+C:\My Data\standard bank\Pokemom\build\Newtonsoft.Json.dll
+C:\My Data\standard bank\Pokemom\build\Newtonsoft.Json.Bson.dll
+C:\My Data\standard bank\Pokemom\build\Swashbuckle.AspNetCore.Swagger.dll
+C:\My Data\standard bank\Pokemom\build\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\My Data\standard bank\Pokemom\build\Swashbuckle.AspNetCore.SwaggerUI.dll

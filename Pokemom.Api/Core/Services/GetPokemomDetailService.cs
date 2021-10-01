@@ -18,7 +18,7 @@ namespace Pokemom.Api.Core.Services
         }
         public async Task<GetPokemomDetailResponse> GetPokemomDetail(string pokeId, string name)
         {
-            GetPokemomDetailResponse result = new GetPokemomDetailResponse();
+            GetPokemomDetailResponse result = new();
             var pokemom = await _getPokemomDetailRepository.GetPokemomDetail(pokeId);
 
             if(pokemom != null)
