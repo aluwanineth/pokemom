@@ -13,10 +13,8 @@ namespace Pokemom.Api.Extentions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<ApiResource>(configuration.GetSection("apiResource"));
-            services.AddScoped<IGetPokemomListRepository, GetPokemomListRepository>();
-            services.AddScoped<IGetPokemomListService, GetPokemomListService>();
-            services.AddScoped<IGetPokemomDetailRepository, GetPokemomDetailRepository>();
-            services.AddScoped<IGetPokemomDetailService, GetPokemomDetailService>();
+            services.AddScoped<IPokemomRepository, PokemomRepository>();
+            services.AddScoped<IPokemomService, PokemomService>();
             return services;
         }
     }

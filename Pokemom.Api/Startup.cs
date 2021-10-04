@@ -51,7 +51,7 @@ namespace Pokemom.Api
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-          //  app.UseMiddleware<ExceptionHandlerMiddleware>();
+            //app.UseMiddleware<ExceptionHandlerMiddleware>();
             app.UseHealthChecks("/health");
 
             app.UseEndpoints(endpoints =>

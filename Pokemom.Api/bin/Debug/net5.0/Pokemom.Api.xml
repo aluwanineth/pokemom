@@ -4,5 +4,57 @@
         <name>Pokemom.Api</name>
     </assembly>
     <members>
+        <member name="M:Pokemom.Api.Controllers.PokemomsController.GetPokemomList(System.Int32,System.Int32)">
+             <summary>
+             Get Pokemom List
+             </summary>
+             <remarks>
+             Sample value of message
+             
+             [
+               {
+                  "status": "200",
+                  "message": "Successfully retrieve pokomom list",
+                  "results": [
+                  {
+                    "name": "cubone",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png",
+                    "pokeUrl": "https://pokeapi.co/api/v2/pokemon/104/"
+                  }
+                 ]
+                }
+            ]
+                 
+             </remarks>
+        </member>
+        <member name="M:Pokemom.Api.Controllers.PokemomsController.GetPokemomDetail(System.String,System.String)">
+            <summary>
+            Get Pokemom Detail
+            </summary>
+            <remarks>
+            This will return pokemom details
+            
+                
+            </remarks>
+        </member>
+        <member name="M:Pokemom.Api.Controllers.PokemomsController.SearchForPokemom(System.String)">
+            <summary>
+            Search For Pokemom
+            </summary>
+            <remarks>
+            Return a single pokemom with name and image
+            
+                {
+                    "status": "200",
+                    "message": "Seccessfully retrieve pokemom data",
+                    "results": {
+                        "name": "marowak",
+                        "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png",
+                        "pokeUrl": "https://pokeapi.co/api/v2/pokemon/105/"
+                    }
+                }
+                
+            </remarks>
+        </member>
     </members>
 </doc>
